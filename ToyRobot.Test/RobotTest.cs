@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using ToyRobot.Simulator.Behaviour;
 
-namespace ToyRobot.Test
+namespace ToyRobot.Simulator.Test
 {
     [TestFixture]
     public class RobotTest

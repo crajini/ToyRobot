@@ -2,7 +2,7 @@
 using ToyRobot.Simulator.Behaviour;
 using ToyRobot.Simulator.CommandReceiver;
 
-namespace ToyRobot.Test
+namespace ToyRobot.Simulator.Test
 {
     [TestFixture]
     public class InputParserTest
