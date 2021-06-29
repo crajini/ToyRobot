@@ -24,9 +24,6 @@ namespace ToyRobot.Simulator.CommandReceiver
         public bool IsValidInput(string[] input)
         {
             Direction direction;
-            Command command;
-            Enum.TryParse(input[0], true, out command);
-
             if (input.Length >= 2)
             {
                 var commandParams = input[1].Split(',');

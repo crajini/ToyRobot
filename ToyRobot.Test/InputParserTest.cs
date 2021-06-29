@@ -37,32 +37,18 @@ namespace ToyRobot.Simulator.Test
             Assert.AreEqual(1, result.Position.Y);
         }
 
-        [Test]
-        public void ValidInputCommand()
+        [TestCase("PLACE 2,3,NORTH", ExpectedResult =true, Description ="")]
+        [TestCase("PLACE 2", ExpectedResult = false, Description = "")]
+        public bool ValidateInputCommand(string command)
         {
             //assign
             var inputParser = new InputParser();
-            var inputCommand = "PLACE 2,1,WEST".Split(' ');
+            var inputCommand = command.Split(' ');
 
             //act
-            bool result = inputParser.IsValidInput(inputCommand);
+            return inputParser.IsValidInput(inputCommand);
 
             //assert
-            Assert.IsTrue(result);
-        }
-
-        [Test]
-        public void InValidInputCommand()
-        {
-            //assign
-            var inputParser = new InputParser();
-            var inputCommand = "PLACE 2".Split(' ');
-
-            //act
-            bool result = inputParser.IsValidInput(inputCommand);
-
-            //assert
-            Assert.IsFalse(result);
         }
     }
 }

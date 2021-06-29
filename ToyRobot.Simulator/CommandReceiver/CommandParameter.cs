@@ -17,10 +17,6 @@ namespace ToyRobot.Simulator.CommandReceiver
 
     public class CommandParameter
     {
-        private const int ParameterCount = 3;
-
-        private const int CommandInputCount = 2;
-
         public PlaceCommandParameter ParseParameters(string[] input, Direction currentDirection)
         {
             Direction direction;

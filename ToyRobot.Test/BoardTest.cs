@@ -6,32 +6,18 @@ namespace ToyRobot.Simulator.Test
     [TestFixture]
     public class BoardTest
     {
-        [Test]
-        public void TestValidPosition()
+        [TestCase(2,1,ExpectedResult =true, Description ="To test the valid position")]
+        [TestCase(6, 8, ExpectedResult = false,Description = "To test the invalid position")]
+        public bool TestPosition(int x, int y)
         {
             //arrange
             var boad = new Board(6, 6);
-            var position = new Position(2, 1);
+            var position = new Position(x, y);
 
             //act
-            var result = boad.IsValidPosition(position);
+            return boad.IsValidPosition(position);
 
             //assert
-            Assert.IsTrue(result);
-        }
-
-        [Test]
-        public void TestInValidPosition()
-        {
-            //arrange
-            var boad = new Board(1, 2);
-            var position = new Position(7, 8);
-
-            //act
-            var result = boad.IsValidPosition(position);
-
-            //assert
-            Assert.IsFalse(result);
-        }
+        }       
     }
 }

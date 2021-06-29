@@ -1,5 +1,4 @@
-﻿using System;
-using ToyRobot.Simulator.Behaviour;
+﻿using ToyRobot.Simulator.Behaviour;
 using ToyRobot.Simulator.Interface;
 
 namespace ToyRobot.Simulator
@@ -8,7 +7,7 @@ namespace ToyRobot.Simulator
     {
         public readonly IRobot _robot;
         public readonly IBoard _board;
-        public IInputParser _inputParser;
+        public readonly IInputParser _inputParser;
 
         public Processor(IRobot robot, IBoard board, IInputParser inputParser)
         {
